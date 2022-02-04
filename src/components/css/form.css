@@ -1,20 +1,21 @@
 .container{
     display: flex;
     flex-direction: column;
-    background-color: #626263;
-    height: 50vh;
+    background-color: #fafafa;
+    height: 60vh;
     width: 50vw;
     padding: 10px;
     border-radius: 8px;
 }
 .select select{
+    background-color: rgb(189, 185, 185);
     height:2rem;
     width: 90%;
     border-radius: 8px;
     outline: none;
     margin: 5px 10px ;
     font-size: 1.15rem;
-    padding-left: 8px;
+    text-align: center;
 }
 label{
     font-size: 1.2rem;
@@ -28,6 +29,7 @@ label{
     border: none;
     font-size: 1.1rem;
     padding-left: 8px;
+    background-color: rgb(189, 185, 185);
 }
 button{
     height:35px;
@@ -36,6 +38,7 @@ button{
     outline: none;
     border: none;
     cursor: pointer;
+    background-color: rgb(189, 185, 185);
 }
 .submit{
     width: 100%;
@@ -43,4 +46,10 @@ button{
     justify-content: center;
     align-items: center;
     margin-top: 1.5rem;
+}
+.alert{
+    color: rgb(204, 33, 33);
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: .2rem 1rem;
 }

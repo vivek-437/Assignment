@@ -23,19 +23,22 @@ const Form = () => {
   };
 
   const post=()=>{
-    allentry.map((val)=>(
+    allentry.map((val)=>{
     axios.post("https://jsonplaceholder.typicode.com/posts",{
       userId:val.id,
       title:val.title,
-      body:val.body
+      body:val.body,
     }).then((result)=>{
-      console.log(result.data)
+      console.log(result)
+    }).catch(error=>{
+        console.log(error);
     })
-    ))
+  })
 
 
 
   }
+
   // getting info from below link
   useEffect(() => {
     const fetchData = async () => {
@@ -57,7 +60,9 @@ const Form = () => {
         <form onSubmit={submit}>
           <div className="select">
             <label>Please select a username:-</label>
+            <div className="alert">{Id?'':'Select a Username *'}</div>
             <select name="" onChange={(e) => setId(e.target.value)}>
+            <option value=''></option>
               {username?.map((val) => (
                 <option value={val.id}>{val.name}</option>
               ))}
@@ -65,6 +70,7 @@ const Form = () => {
           </div>
           <div className="title">
             <label htmlFor="title">Title</label>
+            <div className="alert">{Title?'':'fill the title *'}</div>
             <input
               type="text"
               onChange={(e) => setTitle(e.target.value)}
@@ -73,8 +79,11 @@ const Form = () => {
               name="title"
             />
           </div>
+    
           <div className="body">
             <label htmlFor="body">Body</label>
+            <div className="alert">{Body?'':'fill the body *'}</div>
+
             <input
               type="text"
               onChange={(e) => setBody(e.target.value)}
@@ -83,8 +92,8 @@ const Form = () => {
               name="body"
             />
           </div>
-          <div className="submit">
-            <button type="submit">Submit</button>
+          <div className="submit" >
+            <button type="submit" disabled={(Title && Body)?false:true}>Submit</button>
           </div>
         </form>
       </div>
