@@ -1,0 +1,46 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    background-color: #626263;
+    height: 50vh;
+    width: 50vw;
+    padding: 10px;
+    border-radius: 8px;
+}
+.select select{
+    height:2rem;
+    width: 90%;
+    border-radius: 8px;
+    outline: none;
+    margin: 5px 10px ;
+    font-size: 1.15rem;
+    padding-left: 8px;
+}
+label{
+    font-size: 1.2rem;
+}
+.container input{
+    width: 90%;
+    height:2rem;
+    margin: 5px 10px;
+    border-radius: 8px;
+    outline: none;
+    border: none;
+    font-size: 1.1rem;
+    padding-left: 8px;
+}
+button{
+    height:35px;
+    width: 250px;
+    border-radius: 8px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+.submit{
+    width: 100%;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1.5rem;
+}
